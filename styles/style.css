@@ -1,0 +1,291 @@
+:root{
+    --Almost-White: hsl(0, 0%, 98%);
+    --Medium-Gray: hsl(0, 0%, 41%);
+    --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body{
+    background-color: var(--Almost-White);
+    font-family: 'Epilogue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    background-color: var(--Almost-Black);
+    border-radius: 10px;
+    border-width: 0;
+    color: var(--Almost-White);
+    font-family: 'Epilogue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    padding: 20px 30px;
+}
+
+button:hover{
+    background-color: var(--Almost-White);
+    border: 2px solid var(--Almost-Black);
+    color: var(--Almost-Black);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.snap h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-container{
+    background-color: var(--Almost-White);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2rem 0;
+    width: 90%;
+}
+
+.nav-left-container{
+    display: flex;
+    align-items: center;
+}
+
+.nav-right-container ul li:last-child{
+    border: 2px solid var(--Almost-Black);
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px auto 10px;
+    padding: 10px 20px;
+}
+
+.left-tabs{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.right-tabs{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-container ul{
+    list-style: none;
+}
+
+.nav-container ul li{
+    padding: 1.3rem;
+}
+
+.nav-container ul li a{
+    color: var(--Medium-Gray);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-container ul li a:hover{
+    color: black;
+}
+
+.features, .company{
+    display: none;
+    background-color: white;
+    box-shadow: 0 0 20px -4px var(--Medium-Gray);
+    border-radius: 10px;
+    position: absolute;
+    top: 6rem;
+}
+
+.cancel-img{
+    display: none;
+}
+
+.features{
+    left: 7rem;
+}
+
+.company{
+    left: 20rem;
+}
+
+.features ul, .company ul{
+    padding: 10px 20px;
+}
+
+.features ul li, .company ul li{
+    padding: 10px;
+}
+
+.features ul li img, .company ul li img{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.drop-down{
+    display: none;
+}
+
+main{
+    background-color: var(--Almost-White);
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 8rem 10rem;
+}
+
+.left-content{
+    width: 43%;
+}
+
+.left-content h1{
+    font-size: 5rem;
+}
+
+.left-content p{
+    color: var(--Medium-Gray);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    width: 86%;
+}
+
+.company-names{
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.right-content img{
+    height: 600px;
+}
+
+@media(max-width:1200px){
+    nav{
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .nav-container{
+        background-color: white;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        align-items: baseline;
+        right: 0;
+        padding: 0;
+        display: none;
+    }
+
+    .nav-left-container{
+        padding: 3rem 0 0 1.5rem;
+    }
+
+    .nav-right-container{
+        text-align: center;
+        margin: 0 auto;
+        width: 80%;
+        height: 106vh;
+    }
+
+    .left-tabs, .right-tabs{
+        display: block;
+        padding: 0;
+    }
+
+    .cancel-img{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .features, .company {
+        box-shadow: none;
+        border-radius: 0;
+        position: static;
+        margin-left: 1rem;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .right-content img{
+        content: url(../images/image-hero-mobile.png);
+        height: 500px;
+        width: 100%;
+    }
+
+    .left-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .left-content h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    .left-content p{
+        text-align: center;
+    }
+
+    .drop-down{
+        display: block;
+    }
+}
+
+
+@media(max-width:600px){
+    .nav-container{
+        width: 70%;
+    }
+
+    .right-content{
+        width: 100%;
+    }
+
+    .right-content img{
+        content: url(../images/image-hero-mobile.png);
+        height: 350px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .left-content h1{
+        font-size: 2.3rem;
+    }
+
+    .company-names{
+        gap: 1rem;
+    }
+
+    .company-names div img{
+        width:70px;
+    }
+
+    .company-names div:nth-child(2) img{
+        width:50px;
+    }
+}
